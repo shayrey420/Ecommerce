@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="normal/Base2::layout(~{::.html_head})">
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+</head>
+<body>
+<div class="html_head">
+    <div class="tow">
+        <div class="my-card">
+            <div class="body poo py-3" >
+                <div class="text-center">
+                    <div class="container text-center">
+                        <img class="m-2" style="height: 250px; width: 250px; border-radius: 50%;"
+                             th:src="@{'/imgage/'+${buyer.image}}">
+                        <h1 class="m-3" th:text="${name}"></h1>
+
+                        <table class="table table-dark">
+                            <tbody>
+                            <tr>
+                                <th scope="row">ID</th>
+                                <td th:text="${buyer.id}"></td>
+                                <th>
+                            </tr>
+                            <tr>
+                                <th scope="row">Email</th>
+                                <td th:text="${buyer.email}"></td>
+                                <th>
+                            </tr>
+                            <tr>
+                                <th scope="row">Adress</th>
+                                <td th:text="${buyer.shipping_adress}"></td>
+                                <th>
+                            </tr>
+                            <tr>
+                                <th scope="row">Buyer Phone</th>
+                                <td th:text="${buyer.phone_number}"></td>
+                                <th>
+                            </tr>
+                            <tr>
+                                <th scope="row">ID</th>
+                                <td th:text="${seller.id}"></td>
+                                <th>
+                            </tr>
+                            <tr>
+                                <th scope="row">Seller Phone</th>
+                                <td th:text="${seller.phone}"></td>
+                                <th>
+                            </tr>
+                            <tr>
+                                <th scope="row">Shop Adress</th>
+                                <td th:text="${seller.adress}"></td>
+                                <th>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <button class="btn btn-warning"><a id="pButton" th:href="@{'/buyer/updateBuyer/'+${buyerId}}">Update Buyer</a></button>
+                    <button class="btn btn-success"><a id="pButton" th:href="@{'/buyer/updateSeller/'+${sellerId}}">Update Seller</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="normal/Base::layout(~{::.html_head})">
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+<body>
+
+
+<div class="html_head">
+
+    <div class="container">
+        <div class="toop">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-8 text-center">
+                    <h3>Update Seller</h3>
+                    <form th:method="post" th:action="'/buyer/sellerUpdate/handeler/'+${id}">
+                        <div class="form-group">
+
+                            <input type="text" name="Adress" class="form-control" id="Email2" aria-describedby="emailHelp" placeholder="Adress">
+
+                        </div>
+                        <div class="form-group">
+
+                            <input type="text" name="phone" class="form-control" id="Email2" aria-describedby="emailHelp" placeholder="Phone">
+
+                        </div>
+                        <button type="submit" class="btn btn-warning">Update</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

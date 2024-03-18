@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="normal/Base::layout(~{::.html_head})">
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+</head>
+<body>
+<div class="html_head">
+    <div class="toop">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-6">
+                <form th:method="post" th:action="@{'/buyer/reviewHandeler/'+${productId}}">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Order Id</th>
+                        <th scope="col" th:text="${productId}"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><b>Rating</b></td>
+                        <td>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="rating" id="inlineRadio1" value="1">
+                                <label class="form-check-label" for="inlineRadio1"><b>1</b></label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="rating" id="inlineRadio1" value="2">
+                                <label class="form-check-label" for="inlineRadio1"><b>2</b></label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="rating" id="inlineRadio1" value="3">
+                                <label class="form-check-label" for="inlineRadio1"><b>3</b></label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="rating" id="inlineRadio1" value="4">
+                                <label class="form-check-label" for="inlineRadio1"><b>4</b></label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="rating" id="inlineRadio1" value="5">
+                                <label class="form-check-label" for="inlineRadio1"><b>5</b></label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Comment:</b></td>
+                        <td>
+                            <div class="form-group">
+                                <textarea name="comment" class="form-control"
+                                id="description" aria-describedby="emailHelp" placeholder="Description" rows="2"></textarea>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                    <button class="btn btn-warning pBtn" type="submit">Submit</button>
+                </form>
+                </div>
+            </div>
+            </div>
+        </div>
+
+</div>
+
+</body>
+</html>

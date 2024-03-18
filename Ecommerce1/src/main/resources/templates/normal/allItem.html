@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="normal/Base2::layout(~{::.html_head})">
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+<body>
+
+<div class="html_head">
+
+        <div class="too">
+            <div class="container">
+            <h3 class="bg-warning pro">Products:</h3><br><br>
+                <!--<div th:each="i:${items}">
+                <div class="card" style="width: 14rem;">
+                    <img class="card-img-top" th:src="@{'/image'+${i.image}}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title" th:text="${i.item_name}">Card title</h5>
+                        <p class="card-text" th:text="${i.description}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                </div>-->
+                <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Image</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Brand</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="i : ${items}">
+
+                    <th class="contactTd">
+                        <a class="contactDecoration">
+                        <img class="contactProfile" alt="No Image"
+                            th:src="@{'/image/'+${i.image}}">
+                        </a>
+                    </th>
+                    <td th:text="${i.item_name}"></td>
+                    <td th:text="${i.item_Brand}"></td>
+                    <td th:text="${i.quantity}"></td>
+                    <td th:text="${i.unit_price}"></td>
+                    <td th:text="${i.description}"></td>
+                    <td>
+
+                        <button class="btn btn-danger btn-sm">
+                            <a th:href="@{'/buyer/item/delete/'+${i.id}}">Delete</a>
+                        </button>
+
+                        <br>
+                        <form th:action="@{'/buyer/item/update/'+${i.id}}"
+                              class="mt-2">
+                            <button class="btn btn-success btn-sm">Update</button>
+                        </form>
+                    </td>
+                </tr>
+                </tbody>
+                </table>
+        </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

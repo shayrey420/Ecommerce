@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="Base::layout(~{::.html_head})">
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+
+</head>
+<body class="ap">
+
+
+<div class="html_head">
+    <div class="container">
+        <div class="row" >
+            <div class="card col-3 homeCard text-center" th:each="i : ${items}">
+                <img class="img-fluid" id="im" th:src="@{'/image/'+${i.image}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title" th:text="${i.item_name}">Card title</h5>
+                    <p class="card-text" th:text="${i.description}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text" th:text="'$'+${i.unit_price}"></p>
+                    <a th:href="@{/login}" class="btn btn-warning b"><span class="fa fa-shopping-basket">Add To Cart</span></a>
+                </div>
+            </div>
+        </div>
+
+</div>
+
+</div>
+
+</body>
+</html>

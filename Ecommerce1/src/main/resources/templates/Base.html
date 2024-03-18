@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title th:text="${Title}"></title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link type="image/png" rel="shortcut icon" href="\image\smile.jpg">
+    <!-- font awsome linking -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-warning">
+
+    <div class="container">
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item"><a class="nav-link" th:href="@{/buyerSignup}">Join</a></li>
+                <li class="nav-item"><a class="nav-link">|</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/login}">LogIn</a></li>
+
+
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<section class="header py-3">
+    <div class="container">
+        <div class="row">
+            <div class= "col-3">
+                <div>
+                    <h1><a id="ho" th:href="@{/home}">Smile</a></h1>
+                </div>
+            </div>
+            <div class= "col-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-warning" type="button">Search</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class= "col-3">
+                <i class="fa-2x fa fa-shopping-cart bg-warning" style="margin-left: 80px;" aria-hidden="true"><span><sup id="cartIcon">0</sup></span></i>
+                <i class="fa-2x fa fa-heart bg-warning" aria-hidden="true" style="margin-left:20px;"></i>
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-expand-lg navbar-light">
+
+        <div class="container">
+
+            <div class="form-group">
+
+                <select id="inputState" class="form-control bg-warning">
+                    <option>Categories</option>
+                    <option selected style="background-color: white;">Gadets</option>
+                    <option selected style="background-color: white;">Jewellweries</option>
+                    <option selected style="background-color: white;">Phones</option>
+                </select>
+            </div>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" th:href="@{/gadet}">Gadet</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/jewe}">Jewellary</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/cars}">Car</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/techno}">Technology</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <hr class="bg-warning">
+    <div th:replace="${content}"></div>
+</section>
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

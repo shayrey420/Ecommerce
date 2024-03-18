@@ -1,0 +1,84 @@
+<!doctype html>
+        <html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)">
+        <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title th:text="${Title}"></title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link type="image/png" rel="shortcut icon" href="/image/smile.jpg">
+    <!-- font awsome linking -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <!--   sweet alert -->
+</head>
+
+<body>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-warning">
+
+    <div class="container">
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <h3><a th:href="@{/buyer/home}">Smile</a></h3>
+            <ul class="navbar-nav ml-auto">
+
+
+                <li class="nav-item"><a class="nav-link" th:href="@{/buyer/dashboard}">
+                    <img class="userProfile" alt="No Profile"  th:src="@{'/image/'+${buyer.image}}">
+                    <span th:text="${Title}"></span>
+                </a></li>
+
+                <li class="nav-item"><a class="nav-link"><span>Cart</span><b>
+                    <span th:text="${cardCount}" style="color: green"></span></b></a></li>
+                <li class="nav-item"><a class="nav-link">|</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/logout}">Logout</a></li>
+
+
+
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="sidebar bg-warning">
+
+
+    <a  class="item" th:href="@{/buyer/home}"><i class="fas fa-home"></i> Dashboard</a>
+    <a class="item" th:href="@{/buyer/allItem}"><i class="fas fa-address-card"></i> View Items</a>
+    <a  class="item" th:href="@{/buyer/itemView}"><i class="fas fa-pencil-alt"></i> Add Item</a>
+    <a  class="item" th:href="@{/buyer/purchaseHistory}"><i class="fa fa-history"></i>Purchase History</a>
+    <a  class="item" th:href="@{/buyer/profile}"><i class="fas fa-user-circle"></i> Your Profile</a>
+    <a  class="item" th:href="@{'/buyer/showReview/'+${buyer.id}}"><i class="fas fa-user-circle"></i> Reviews</a>
+
+
+    <div class="divider"></div>
+</div>
+    <div th:replace="${content}"></div>
+</section>
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html>

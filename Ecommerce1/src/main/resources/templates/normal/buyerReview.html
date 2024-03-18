@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="normal/Base::layout(~{::.html_head})">
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+</head>
+<body>
+<div class="html_head">
+    <div class="buy">
+        <div class="container">
+
+            <table class="table">
+                <thead>
+                <tr>
+
+                    <th scope="col">Order Id</th>
+
+
+                    <th scope="col">Comment</th>
+                    <th scope="col">Rating</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="i : ${review}">
+
+
+                    <td th:text="${i.id}"></td>
+                    <td th:text="${i.comment}"></td>
+                    <td th:text="${i.reating}"></td>
+
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

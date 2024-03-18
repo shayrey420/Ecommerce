@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="normal/Base::layout(~{::.html_head})">
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+</head>
+<body>
+<div class="html_head">
+    <div class="toop">
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Image</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Brand</th>
+                        <th scope="col">Price</th>
+
+                    </tr>
+                    </thead>
+
+                    <!--<tr th:each="i : ${cart}">
+
+                        <th class="contactTd">
+                            <a class="contactDecoration">
+                                <img class="contactProfile" alt="No Image"
+                                     th:src="@{'/image/'+${i.image}}">
+                            </a>
+                        </th>
+                        <td th:text="${i.item_name}"></td>
+                        <td th:text="${i.item_Brand}"></td>
+
+                        <td th:text="${i.unit_price}"></td>
+
+                        <td>
+                            <a th:href="@{'/buyer/remove/'+${index}}" style="color: red">Remove</a>
+
+                        </td>
+                    </tr>-->
+                    <tbody>
+                    <tr th:each="i,item : ${cart}">
+
+                        <th class="contactTd">
+                            <a class="contactDecoration">
+                                <img class="contactProfile" alt="No Image"
+                                     th:src="@{'/image/'+${i.image}}">
+                            </a>
+                        </th>
+                        <td th:text="${i.item_name}"></td>
+                        <td th:text="${i.item_Brand}"></td>
+
+                        <td th:text="${i.unit_price}"></td>
+
+                        <td>
+                            <a th:href="@{'/buyer/remove/'+${item.index}}" style="color: red">Remove</a>
+
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="payBor col-4">
+                <h3>Total Payment</h3>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+
+
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td>
+                            Amount Payable
+                        </td>
+                        <td th:text="${total}"></td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            Vat
+                        </td>
+                        <td> 5%</td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            Toltal Amount<br>Includin Vat
+                        </td>
+                        <td th:text="${vatTotal}"></td>
+
+                    </tr>
+                </table>
+
+                    <form th:method="post" th:action="@{/buyer/payment}" class="py-3">
+
+                        <div id="demo" class="form-group">
+
+                            <input type="text" name="card_name" class="form-control"  aria-describedby="emailHelp" placeholder="Card id">
+
+                        </div>
+                        <div class="form-group">
+
+                            <input type="text" name="card_number" class="form-control"  aria-describedby="emailHelp" placeholder="Number">
+
+                        </div>
+                        <div class="form-group">
+
+                            <input type="text" name="card_company" class="form-control"  aria-describedby="emailHelp" placeholder="Card company">
+
+                        </div>
+                        <div class="form-group">
+
+                            <input type="text" name="card_expiratoion" class="form-control"  aria-describedby="emailHelp" placeholder="YYYY/MM/DD">
+
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-warning">Payment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<script>
+    function myFunction() {
+        document.getElementById("demo").style.display("block");
+    }
+</script>
+</body>
+</html>

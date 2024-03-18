@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="normal/Base::layout(~{::.html_head})">
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+<body>
+
+
+<div class="html_head">
+
+    <div class="container">
+        <div class="toop">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-8 text-center">
+                <h3>Registration</h3>
+                <form th:method="post" th:action="@{/buyer/sellerHandeler}">
+                    <div th:if="${session.message}" th:classappend="${session.message.type}" class="alert">
+                        <p th:text="${session.message.content}" class="text-center"></p>
+
+                        <th:block th:text="${#session.removeAttribute('message')}"></th:block>
+                    </div>
+
+                    <div class="form-group">
+
+
+
+                        <input type="email" name="email" class="form-control" id="Email2" aria-describedby="emailHelp" placeholder="Email..">
+
+                    </div>
+                    <div class="form-group">
+
+                        <input type="text" name="phone_" class="form-control" id="phoneNumber" aria-describedby="emailHelp" placeholder="Phone..">
+
+                    </div>
+                    <div class="form-group">
+
+                        <input type="password" autocomplete="off" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password..">
+                    </div>
+                    <div class="form-group">
+
+                        <input type="text" name="adress" class="form-control" id="Adress" aria-describedby="emailHelp" placeholder="Adress..">
+
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" name="agreement" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-warning">Submit</button>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+</body>
+</html>

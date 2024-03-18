@@ -1,0 +1,212 @@
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    color:black!important;
+}
+.header{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+
+
+}
+.hea{
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+.ioo{
+    border: none;
+}
+
+body.ap {
+    margin: 0;
+    padding: 0;
+    background-color: #17a2b8;
+    height: 100vh;
+}
+#login .container #login-row #login-column #login-box {
+    margin-top: 120px;
+    max-width: 600px;
+    height: 320px;
+    border: 1px solid #9C9C9C;
+    background-color: #EAEAEA;
+
+}
+#login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+
+}
+#login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -85px;
+}
+.sidebar{
+    background: white;
+    width:18%;
+    height:100%;
+    position:fixed;
+
+
+}
+.content{
+    margin-left : 20%;
+}
+.sidebar a{
+    padding: 10px 25px;
+    display:block;
+    color:gray;
+    width:100%!important ;
+    text-decoration: none;
+    padding-top: 15px;
+    z-index: 99999999;
+
+
+
+}
+.sidebar a:hover{
+    color:black;
+    background: #ffa522;
+    text-decoration: none;
+}
+.sidebar .divider{
+    height: .7px;
+    width:100%;
+    background: #e2e2e2;
+    margin-top:10px;
+}
+@media only screen and(max-width: 600px){
+    .sidebar{
+        display: none;
+        width:80%!important;
+        background:white;
+        height:100vh;
+        position:fixed;
+        padding-top:20px;
+
+
+    }
+}
+.sidebar .crossBtn{
+    position:absolute;
+    top:0;
+    font-size:36px;
+    cursor: pointer;
+    right:35px;
+
+
+}
+.userProfile{
+	
+	height: 35px;
+	width: 35px;
+	object-fit:cover;
+	border-radius: 50%;
+}
+.io{
+        padding-left: 20px;!important;
+        padding-right: 20px;!important;
+}
+.to{
+    position: relative;
+    margin-left: 300px;
+    margin-top:67px;
+
+}
+.tow{
+    position: relative;
+    margin-left: 200px;
+    margin-top:67px;
+}
+.too{
+    position: relative;
+    margin-left: 220px;
+    margin-top:67px;
+
+}
+.toop{
+    position: relative;
+
+    margin-top:80px;
+
+}
+.po{
+    margin-left: 320px;
+}
+.poo{
+    margin-left: 125px;
+}
+.tooo{
+	 position: relative;
+    margin-left: 300px;
+    margin-top:80px;
+}
+
+.contactProfile{
+    height: 35px;
+    width: 35px;
+    object-fit:cover;
+    border-radius: 50%;
+}
+.contactTd .contactDecoration{
+    text-decoration: none;
+
+}
+.pro{
+    position: fixed;
+}
+.homeCard{
+
+    margin-left: 70px;!important;
+    margin-bottom: 25px;
+    height: 400px;!important;
+    border: none;!important;
+
+
+}
+.homeCard:hover{
+    background: lightgray;
+    color: white;
+}
+#im{
+
+    height: 200px;!important;
+    width: 100%;!important;
+}
+
+.b{
+    border-radius: 10rem;
+    padding: 1rem 2rem;
+}
+#cartIcon{
+    color: green;
+}
+.buy{
+    position: relative;
+    margin-top: 80px;
+}
+.payBor{
+    border: #ffa522;!important;
+}
+.demo{
+    display: none;!important;
+}
+.pBtn{
+    margin-left: 510px;
+}
+#ho{
+    color: black;!important;
+}
+#pButton{
+   color: white;!important;
+}

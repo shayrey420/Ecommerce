@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="normal/Base3::layout(~{::.html_head})">
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+<body>
+
+
+
+<div class="html_head">
+    <div>
+    <div class="container">
+        <div class="to">
+
+        <h1 class="bg-warning text-center"><a th:href="@{/buyer/sellerForm}">Join As Seller</a></h1>
+            </div>
+
+        <div class="my-card">
+            <div class="body po py-3" style="width: 70%">
+                <div class="text-center">
+
+                    <h1 class="m-3" th:text="${Title}"></h1>
+
+                    <table class="table table-dark bg-warning">
+                        <tbody>
+                        <tr>
+                            <th scope="row">ID</th>
+                            <td th:text="${buyer.id}"></td>
+                            <th>
+                        </tr>
+                        <tr>
+                            <th scope="row">Email</th>
+                            <td th:text="${buyer.email}"></td>
+                            <th>
+                        </tr>
+                        <tr>
+                            <th scope="row">Role</th>
+                            <td th:text="${buyer.role}"></td>
+                            <th>
+                        </tr>
+                        <tr>
+                            <th scope="row">Phone</th>
+                            <td th:text="${buyer.getPhone_number()}"></td>
+                            <th>
+                        </tr>
+                        <tr>
+                            <th scope="row">Adress</th>
+                            <td th:text="${fullAdress}"></td>
+                            <th>
+                        </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+        </div>
+        </div>
+
+</div>
+
+
+</body>
+</html>

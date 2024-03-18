@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="Base::layout(~{::.html_head})">
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+<body>
+
+
+
+<div class="html_head">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-8 text-center">
+                <h3>Registration</h3>
+                <form th:method="post" th:action="@{/buyerHandeler}" enctype="multipart/form-data" th:object="${buyer}">
+                    <div class="form-group">
+                        <div th:if="${session.message}" th:classappend="${session.message.type}" class="alert">
+                            <p th:text="${session.message.content}" class="text-center"></p>
+
+                            <th:block th:text="${#session.removeAttribute('message')}"></th:block>
+                        </div>
+
+                        <input type="text" autocomplete="off" name="user_name" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="User name..">
+
+                    </div>
+                    <div class="form-group">
+
+                        <input type="text" name="first_name" class="form-control" id="Fname" aria-describedby="emailHelp" placeholder="First name..">
+
+                    </div>
+                    <div class="form-group">
+
+                        <input type="text" name="last_name" class="form-control" id="Lname" aria-describedby="emailHelp" placeholder="Last name..">
+
+                    </div>
+                    <div class="form-group">
+
+                        <input type="email" name="email" class="form-control" id="Email2" aria-describedby="emailHelp" placeholder="Email..">
+
+                    </div>
+                    <div class="form-group">
+
+                        <input type="text" name="phone_number" class="form-control" id="phoneNumber" aria-describedby="emailHelp" placeholder="Phone..">
+
+                    </div>
+                    <div class="form-group">
+
+                        <input type="password" autocomplete="off" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password..">
+                    </div>
+                    <div class="form-group">
+
+                        <input type="text" name="adress" class="form-control" id="Adress" aria-describedby="emailHelp" placeholder="Adress..">
+
+                    </div>
+                    <div class="form-group">
+
+                        <input type="text" name="Role" class="form-control" id="Role" aria-describedby="emailHelp" placeholder="Role">
+
+                    </div>
+                    <div class="form-group">
+
+                        <input type="text" name="shipping_adress" class="form-control" id="sAdress" aria-describedby="emailHelp" placeholder="Shipping_adress">
+
+                    </div>
+                    <div class="form-group">
+
+                        <input type="text" name="shipping_city" class="form-control" id="sCity" aria-describedby="emailHelp" placeholder="Shipping city">
+
+                    </div>
+                    <div class="form-group">
+
+                        <input type="text" name="shipping_division" class="form-control" id="sDivision" aria-describedby="emailHelp" placeholder="Shipping division..">
+
+                    </div>
+                    <div class="form-group">
+
+                        <input type="text" name="shipping_upazila" class="form-control" id="sUpazila" aria-describedby="emailHelp" placeholder="Shipping upazila..">
+
+                    </div>
+                    <div class="form-group">
+
+                        <input type="text" name="shipping_zipcode" class="form-control" id="sZipcode" aria-describedby="emailHelp" placeholder="Shipping zipcode..">
+
+                    </div>
+
+                    <div class="input-group mb-3">
+
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile03" name="profileImage">
+                            <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
+                        </div>
+                    </div>
+
+                    <div class="form-check py-1">
+                        <input type="checkbox" name="agreement" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Accept terms & conditions</label>
+                    </div>
+                    <button type="submit" class="btn btn-warning">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+</body>
+</html>
